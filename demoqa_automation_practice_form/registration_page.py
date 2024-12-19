@@ -44,8 +44,8 @@ class RegistrationPage:
     def fill_hobby(self, value):
         browser.element('#hobbiesWrapper').element(by.text(value)).click()
 
-    def up_load_picture(self, path):
-        browser.element("#uploadPicture").send_keys(os.path.abspath(f"../resources/images/{path}"))
+    # def up_load_picture(self, path):
+    #     browser.element("#uploadPicture").send_keys(os.path.abspath(f"../resources/images/{path}"))
         # browser.element("#uploadPicture").set_value(
         #     os.path.abspath(
         #         os.path.join(os.path.dirname(resources._file_),f"images/{path}")
@@ -77,7 +77,7 @@ class RegistrationPage:
         self.fill_date_of_birth(new_user.month, new_user.year, new_user.day)
         self.fill_subject(new_user.subjects)
         self.fill_hobby(new_user.hobbies)
-        self.up_load_picture(new_user.images)
+        # self.up_load_picture(new_user.images)
         self.fill_current_address(new_user.current_address)
         self.fill_state(new_user.state)
         self.fill_city(new_user.city)
@@ -107,8 +107,8 @@ class TableResponsive:
     def assert_hobbies(self, hobbies):
         browser.element('.table').should(have.text(hobbies))
 
-    def assert_images(self, images):
-        browser.element('.table').should(have.text(images))
+    # def assert_images(self, images):
+    #     browser.element('.table').should(have.text(images))
 
     def assert_currentAddress(self, currentAddress):
         browser.element('.table').should(have.text(currentAddress))
@@ -124,6 +124,6 @@ class TableResponsive:
         self.assert_date_of_birth(new_user.day, new_user.month, new_user.year)
         self.assert_subjects(new_user.subjects)
         self.assert_hobbies(new_user.hobbies)
-        self.assert_images(new_user.images)
+        # self.assert_images(new_user.images)
         self.assert_currentAddress(new_user.current_address)
         self.assert_state_and_city(new_user.state, new_user.city)

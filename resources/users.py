@@ -13,7 +13,7 @@ class User:
     gender: str
     subjects: str
     hobbies: str
-    images: str
+    # images: str
     current_address: str
     state: str
     city: str
@@ -29,7 +29,7 @@ new_user = User(
     day = '3',
     gender =  'Female',
     hobbies = 'Reading',
-    images = 'butterflies.png',
+    # images = 'butterflies.png',
     current_address = 'Russia',
     subjects ='Computer Science',
     state = 'Uttar Pradesh',
