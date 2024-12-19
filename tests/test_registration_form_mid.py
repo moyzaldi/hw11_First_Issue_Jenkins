@@ -1,6 +1,8 @@
 import allure
+
 from demoqa_automation_practice_form.registration_page import RegistrationPage, TableResponsive
 from resources.users import new_user
+
 
 @allure.description('Это тест на регистрацию уровня mid-level-step-objects')
 @allure.tag('Registration')
