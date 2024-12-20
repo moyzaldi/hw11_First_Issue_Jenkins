@@ -43,7 +43,8 @@ class RegistrationPage:
         browser.element('#hobbiesWrapper').element(by.text(value)).click()
 
     def up_load_picture(self, path):
-        browser.element("#uploadPicture").send_keys(os.path.abspath(os.path.join(os.path.dirname(__file__), "..resources/images/butterflies.png")))
+        browser.element("#uploadPicture").send_keys(
+            os.path.abspath(os.path.join(os.path.dirname(__file__), f"..resources/images/{path}")))
 
     #     browser.element("#uploadPicture").send_keys(os.path.abspath(f"../resources/images/{path}"))
         # browser.element("#uploadPicture").set_value(
