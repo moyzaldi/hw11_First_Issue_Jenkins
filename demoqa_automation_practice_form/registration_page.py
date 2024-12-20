@@ -44,7 +44,9 @@ class RegistrationPage:
 
     def up_load_picture(self, path):
         browser.element("#uploadPicture").send_keys(
-            os.path.abspath(os.path.join(os.path.dirname(__file__), f"..resources/images/{path}")))
+            os.path.abspath(os.path.join(os.path.dirname(__file__), f"../resources/images/{path}")))
+
+
 
     #     browser.element("#uploadPicture").send_keys(os.path.abspath(f"../resources/images/{path}"))
         # browser.element("#uploadPicture").set_value(
