@@ -40,8 +40,8 @@ def test_registration_user(browser_settings):
     with allure.step("Заполняем хобби"):
         registration_page.fill_hobby(new_user.hobbies)
 
-    # with allure.step("Загружаем картинку"):
-    #     registration_page.up_load_picture(new_user.images)
+    with allure.step("Загружаем картинку"):
+        registration_page.up_load_picture(new_user.images)
 
     with allure.step("Заполняем а текущий адрес"):
         registration_page.fill_current_address(new_user.current_address)
@@ -79,8 +79,8 @@ def test_registration_user(browser_settings):
     with allure.step("Проверяем хобби"):
         table_responsive.assert_hobbies(new_user.hobbies)
 
-    # with allure.step("Проверяем картинку"):
-    #     table_responsive.assert_images(new_user.images)
+    with allure.step("Проверяем картинку"):
+        table_responsive.assert_images(new_user.images)
 
     with allure.step("Проверяем текущий адрес"):
         table_responsive.assert_currentAddress(new_user.current_address)
